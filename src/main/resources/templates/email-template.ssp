@@ -1,0 +1,24 @@
+#import(flow.steps.Person)
+#import(scala.util.Random)
+<%@ var person: Person %>
+<html>
+
+<head></head>
+
+<body>
+    <p>Dear ${person.firstName} ${person.lastName},</p>
+    <p>Sending Email using our amazing workflow engine with <b>Velocity Template!!!</b></p>
+    <p>Thanks</p>
+    <p>${person.signature}</p>
+    <p>${person.location}</p>
+
+    <p>
+        #if (Random.nextBoolean())
+            Hey James
+        #else
+            Dunno
+        #end
+    </p>
+</body>
+
+</html>
